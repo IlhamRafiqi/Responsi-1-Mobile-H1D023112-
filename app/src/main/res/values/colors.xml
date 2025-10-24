@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Player position colors -->
+    <color name="goalkeeper_color">#FFE500</color>
+    <color name="defender_color">#2196F3</color>
+    <color name="midfielder_color">#4CAF50</color>
+    <color name="forward_color">#F44336</color>
+    <color name="default_color">#9E9E9E</color>
+    
+    <!-- Wolves colors -->
+    <color name="wolves_gold">#FDB913</color>
+    <color name="wolves_black">#231F20</color>
+</resources>

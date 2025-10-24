@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#fff"
+                android:padding="0dp">
+
+                <ImageView
+                    android:id="@+id/imgHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_history" />
+
+                <TextView
+                    android:id="@+id/tvHistoryTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wolverhampton Wanderers FC History"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="#222" />
+
+                <TextView
+                    android:id="@+id/tvHistoryDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="    Wolverhampton Wanderers Football Club, atau yang lebih dikenal sebagai Wolves, merupakan salah satu klub sepak bola tertua dan paling bersejarah di Inggris. Klub ini berdiri pada tahun 1877, berawal dari tim sekolah bernama St Luke’s FC di Wolverhampton yang kemudian bergabung dengan klub lokal The Wanderers pada tahun 1879. Dari sinilah lahir nama Wolverhampton Wanderers. Sejak awal berdirinya, Wolves dikenal dengan warna kebesaran emas dan hitam yang diambil dari lambang kota Wolverhampton. Klub ini kemudian menjadi salah satu dari dua belas pendiri Football League pada tahun 1888 — liga sepak bola profesional pertama di dunia. Dalam musim perdananya, Wolves langsung tampil kuat dan mencapai final FA Cup, sebelum akhirnya meraih trofi pertama mereka di ajang tersebut pada tahun 1893 setelah mengalahkan Everton.\n\n    Memasuki awal abad ke-20, Wolves mengalami masa naik-turun, dengan beberapa kali terdegradasi ke divisi bawah. Namun masa keemasan benar-benar datang pada era 1940-an hingga akhir 1950-an di bawah kepemimpinan manajer legendaris Stan Cullis. Bersama pemain ikonik seperti Billy Wright, Wolves berhasil menjuarai liga Inggris tiga kali pada musim 1953–54, 1957–58, dan 1958–59, serta memenangkan dua trofi FA Cup (1949 dan 1960). Pada periode ini, Wolves juga dikenal sebagai pionir dalam pertandingan internasional antarklub, terutama setelah mengalahkan Honvéd Budapest pada tahun 1954. Kemenangan tersebut membuat media Inggris menyebut Wolves sebagai “Champions of the World”, dan pertandingan-pertandingan seperti itu kemudian menginspirasi terbentuknya kompetisi European Cup (sekarang Liga Champions UEFA).\n\n    Setelah era emas tersebut, Wolves memasuki masa sulit. Meskipun sempat meraih gelar Piala Liga pada tahun 1974 dan 1980, klub kemudian mengalami krisis keuangan dan performa pada 1980-an, hingga terdegradasi ke Divisi Keempat pada 1986. Namun semangat klub dan dukungan penggemar tidak pernah padam. Kebangkitan dimulai ketika pengusaha Sir Jack Hayward membeli klub pada awal 1990-an dan merenovasi total stadion Molineux, yang telah menjadi markas klub sejak 1889. Meski sempat kesulitan menembus Premier League, Wolves akhirnya promosi pada tahun 2003, walau hanya bertahan satu musim sebelum kembali turun ke Championship.\n\n    Kebangkitan modern Wolves dimulai pada tahun 2016 ketika perusahaan asal Tiongkok, Fosun International, membeli klub dan membangun visi baru untuk menjadikannya kekuatan Eropa. Di bawah pelatih Nuno Espírito Santo, Wolves tampil mengesankan dengan promosi ke Premier League pada 2018, finis di posisi ke-7 dua musim berturut-turut, dan bahkan mencapai perempat final Liga Europa pada 2020. Molineux Stadium kembali menjadi simbol kebanggaan kota Wolverhampton — stadion berkapasitas sekitar 31.000 penonton ini tetap berdiri kokoh sebagai saksi perjalanan panjang klub dari masa ke masa. Hingga kini, Wolverhampton Wanderers dikenal sebagai klub dengan identitas kuat, filosofi permainan disiplin, serta semboyan yang melekat dalam sejarahnya: “Out of Darkness Cometh Light” — dari kegelapan datanglah cahaya."
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:justificationMode="inter_word"
+                    android:textColor="#444" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

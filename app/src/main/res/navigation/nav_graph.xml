@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_profile">
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.responsi1.fragment.ProfileFragment"
+        android:label="Profile">
+        <action
+            android:id="@+id/action_profileFragment_to_historyFragment"
+            app:destination="@id/navigation_history" />
+        <action
+            android:id="@+id/action_profileFragment_to_coachFragment"
+            app:destination="@id/navigation_coach" />
+        <action
+            android:id="@+id/action_profileFragment_to_playerFragment"
+            app:destination="@id/navigation_players" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.example.responsi1.fragment.HistoryFragment"
+        android:label="History" />
+
+    <fragment
+        android:id="@+id/navigation_coach"
+        android:name="com.example.responsi1.fragment.CoachFragment"
+        android:label="Coach" />
+
+    <fragment
+        android:id="@+id/navigation_players"
+        android:name="com.example.responsi1.fragment.PlayersFragment"
+        android:label="Players" />
+
+</navigation>
