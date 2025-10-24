@@ -24,12 +24,15 @@ class TeamViewModel : ViewModel() {
                 if (response.isSuccessful) {
                     response.body()?.let {
                         _team.value = it
+                    } ?: run {
+                        _error.value = "Error: Response body is null"
                     }
                 } else {
-                    _error.value = "Error: ${response.code()}"
+                    val errorBody = response.errorBody()?.string()
+                    _error.value = "Error: ${response.code()} - $errorBody"
                 }
             } catch (e: Exception) {
-                _error.value = e.message
+                _error.value = "Exception: ${e.message}"
             }
         }
     }

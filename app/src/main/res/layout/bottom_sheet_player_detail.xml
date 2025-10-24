@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tvDetailName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Player Name"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvDetailDateOfBirth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1997-05-28"
+        android:textSize="16sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tvDetailNationality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Germany"
+        android:textSize="16sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tvDetailPosition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Goalkeeper"
+        android:textSize="16sp"
+        android:textColor="#555555" />
+
+</LinearLayout>

@@ -2,6 +2,7 @@ package com.example.responsi1.repository
 
 import com.example.responsi1.api.ApiConfig
 import com.example.responsi1.api.FootballService
+import com.example.responsi1.api.WOLVES_TEAM_ID
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -29,7 +30,7 @@ class TeamRepository {
     }
 
     suspend fun getTeamInfo() = footballService.getTeamInfo(
-        ApiConfig.WOLVES_TEAM_ID,
+        WOLVES_TEAM_ID,
         ApiConfig.API_TOKEN
     )
 }

@@ -36,7 +36,12 @@ class PlayersFragment : Fragment() {
         }
         
         viewModel.team.observe(viewLifecycleOwner) { team ->
-            playerAdapter.setPlayers(team.squad)
+            // Filter hanya pemain (bukan coach)
+            val playersOnly = team.squad.filter { player ->
+                player.role?.equals("PLAYER", ignoreCase = true) == true ||
+                player.role == null // jika role null, anggap sebagai player
+            }
+            playerAdapter.setPlayers(playersOnly)
         }
         
         viewModel.fetchTeamInfo()

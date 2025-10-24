@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.responsi1.R
 import com.example.responsi1.model.Player
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class PlayerAdapter(private val context: Context) : 
     RecyclerView.Adapter<PlayerAdapter.PlayerViewHolder>() {
@@ -31,31 +31,50 @@ class PlayerAdapter(private val context: Context) :
         val player = players[position]
         holder.bind(player)
         
-        // Set card color based on position
-        val cardColor = when(player.position) {
-            "Goalkeeper" -> R.color.goalkeeper_color
-            "Defender" -> R.color.defender_color
-            "Midfielder" -> R.color.midfielder_color
-            "Offence" -> R.color.forward_color
-            else -> R.color.default_color
+        // Set card color based on position (dari API)
+        // Goalkeeper: Kuning, Defender: Biru, Midfielder: Hijau, Forward: Merah
+        val cardColor = when {
+            player.position?.contains("Goalkeeper", ignoreCase = true) == true -> android.graphics.Color.parseColor("#FFD700") // Kuning
+            player.position?.contains("Defence", ignoreCase = true) == true || 
+            player.position?.contains("Defender", ignoreCase = true) == true -> android.graphics.Color.parseColor("#0000FF") // Biru
+            player.position?.contains("Midfield", ignoreCase = true) == true -> android.graphics.Color.parseColor("#00FF00") // Hijau
+            player.position?.contains("Offence", ignoreCase = true) == true || 
+            player.position?.contains("Forward", ignoreCase = true) == true ||
+            player.position?.contains("Attack", ignoreCase = true) == true -> android.graphics.Color.parseColor("#FF0000") // Merah
+            else -> android.graphics.Color.parseColor("#CCCCCC") // Abu-abu untuk posisi lain
         }
         
-        holder.cardView.setCardBackgroundColor(
-            ContextCompat.getColor(context, cardColor)
-        )
+        holder.cardView.setCardBackgroundColor(cardColor)
+        
+        // Set click listener untuk menampilkan bottom sheet
+        holder.itemView.setOnClickListener {
+            showPlayerDetailBottomSheet(player)
+        }
+    }
+    
+    private fun showPlayerDetailBottomSheet(player: Player) {
+        val bottomSheetDialog = BottomSheetDialog(context)
+        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_player_detail, null)
+        
+        // Set data ke bottom sheet
+        view.findViewById<TextView>(R.id.tvDetailName).text = player.name
+        view.findViewById<TextView>(R.id.tvDetailDateOfBirth).text = player.dateOfBirth
+        view.findViewById<TextView>(R.id.tvDetailNationality).text = player.nationality
+        view.findViewById<TextView>(R.id.tvDetailPosition).text = player.position ?: "Unknown"
+        
+        bottomSheetDialog.setContentView(view)
+        bottomSheetDialog.show()
     }
     
     override fun getItemCount(): Int = players.size
     
     class PlayerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val tvName: TextView = itemView.findViewById(R.id.tvPlayerName)
-        private val tvPosition: TextView = itemView.findViewById(R.id.tvPosition)
         private val tvNationality: TextView = itemView.findViewById(R.id.tvNationality)
         val cardView: CardView = itemView.findViewById(R.id.cardView)
         
         fun bind(player: Player) {
             tvName.text = player.name
-            tvPosition.text = player.position
             tvNationality.text = player.nationality
         }
     }

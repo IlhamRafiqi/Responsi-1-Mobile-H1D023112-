@@ -23,7 +23,7 @@
         android:layout_margin="16dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="2dp"
-        android:backgroundTint="#F88379">
+        android:backgroundTint="#D4A017">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                 android:id="@+id/tvCoachName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Coach Name"
+                android:text="Loading..."
                 android:textStyle="italic"
                 android:textSize="28sp"
                 android:gravity="center"
@@ -46,7 +46,7 @@
                 android:id="@+id/tvCoachDateOfBirth"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tanggal Lahir"
+                android:text="..."
                 android:textSize="18sp"
                 android:gravity="center"
                 android:textColor="#222"
@@ -56,7 +56,7 @@
                 android:id="@+id/tvCoachNationality"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Negara"
+                android:text="..."
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:gravity="center"

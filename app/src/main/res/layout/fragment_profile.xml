@@ -55,7 +55,7 @@
         android:id="@+id/tvProfileDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#F88379"
+        android:background="#D4A017"
         android:textColor="#fff"
         android:textSize="15sp"
         android:padding="12dp"
