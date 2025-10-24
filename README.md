@@ -5,7 +5,7 @@
 - Shif: I-C
 
 ### Vidio Demo Aplikasi
-![Demo Aplikasi](DemoAplikasi3.gif)
+![Demo Aplikasi](DemoAplikasiResponsi1.gif)
 
 ### Penjelasan alur data mulai dari pemanggilan ke API hingga
 penyajian di layar.
